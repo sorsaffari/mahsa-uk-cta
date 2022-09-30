@@ -26,7 +26,10 @@ export const Truncate = (props) => {
           <i>{isOpen ? <IconChevronUp /> : <IconChevronDown />}</i>
         </div>
       </div>
-      <div className='truncate__body'>{props.children}</div>
+      <div className='truncate__body'>
+        <div>{props.children}</div>
+        {!isOpen ? <span onClick={() => setIsOpen(true)}>Read more</span> : ''}
+      </div>
     </StyledTurncate>
   );
 };

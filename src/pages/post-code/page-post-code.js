@@ -44,14 +44,16 @@ export const PagePostCode = () => {
             error={postCodeValidationError}
             label='Enter your UK post code'
             onChange={handlePostCodeChange}
-            size='lg'
+            size="lg"
+            radius="md"
           />
           <SCNextButton
             onClick={handlePostCodeSubmit}
             loading={isValidatingPostCode}
             disabled={!postCode}
             fullWidth
-            size='lg'
+            size="lg"
+            radius="md"
           >
             Next
           </SCNextButton>

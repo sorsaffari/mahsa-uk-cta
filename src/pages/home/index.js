@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@mantine/core';
 import FirstPageContainer from './first-page-container.style.js';
-import Mahsa from './mahsa-grayscale.jpg';
+import Mahsa from './mahsa.png';
 
 export const Home = () => {
   return (
