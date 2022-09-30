@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components';
 
 export const StyledTurncate = styled.div`
-	max-height: 3.5rem;	
+	max-height: 8.5rem;	
 	transition: max-height 0.5s;
 	margin-bottom: 0.75rem;
 	overflow: hidden;
@@ -83,10 +83,33 @@ export const StyledTurncate = styled.div`
 	}
 	.truncate__body{
 		padding: 0.5rem;
+		position: relative;
+		max-height: 18rem;
+		overflow-y: auto;
+		>span{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: flex-end;
+			align-content: center;		
+			position: absolute;
+			height: 5rem;
+			width: 100%;
+			top: 0;
+			opacity: 1;
+			transition: opacity 0.2s;
+			background: rgb(255,255,255);
+			font-size: 0.9rem;
+			background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		}
 	}
 	${props =>
 		props.isOpen &&
 		css`
 		max-height: 100vh !important;
+		.truncate__body > span{
+			opacity: 0;
+		}
 	`};
 `

@@ -29,9 +29,28 @@ export const Templates = () => {
 				Use your own words; we block copied-and-pasted identical messages.
 			</Alert>
 			<br/>
+
 			<Truncate title="salam" description="hey">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto dolorem ab reiciendis libero. Repudiandae voluptatem quam recusandae ex expedita saepe necessitatibus perferendis, earum laboriosam neque, similique voluptates! Harum, voluptas.
+				<p style={{color: '#444', marginTop: 0, fontSize: '0.9rem', lineHeight: 1.2}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto dolorem ab reiciendis libero. Repudiandae voluptatem quam recusandae ex expedita saepe necessitatibus perferendis, earum laboriosam neque, similique voluptates! Harum, voluptas.</p>
+				<Button variant="light" color="violet" radius="md" size="md" fullWidth>
+					Use this template
+				</Button>
 			</Truncate>
+
+			<Truncate title="salam" description="hey">
+				<p style={{color: '#444', marginTop: 0, fontSize: '0.9rem', lineHeight: 1.2}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto dolorem ab reiciendis libero. Repudiandae voluptatem quam recusandae ex expedita saepe necessitatibus perferendis, earum laboriosam neque, similique voluptates! Harum, voluptas.</p>
+				<Button variant="light" color="violet" radius="md" size="md" fullWidth>
+					Use this template
+				</Button>
+			</Truncate>
+
+			<Truncate title="salam" description="hey">
+				<p style={{color: '#444', marginTop: 0, fontSize: '0.9rem', lineHeight: 1.2}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto dolorem ab reiciendis libero. Repudiandae voluptatem quam recusandae ex expedita saepe necessitatibus perferendis, earum laboriosam neque, similique voluptates! Harum, voluptas.</p>
+				<Button variant="light" color="violet" radius="md" size="md" fullWidth>
+					Use this template
+				</Button>
+			</Truncate>
+
 			<Button variant="light" color="violet" radius="md" size="md" onClick={() => setIsOpen(false)} fullWidth>
 				Got it!
 			</Button>
