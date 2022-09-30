@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { IconChevronLeft } from '@tabler/icons';
+import { Link } from "react-router-dom";
 
 
 export const SCContainer = styled.div`
@@ -25,19 +26,25 @@ export const SCNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: c;
-  padding: 0 2rem;
-`;
+  padding: 0 1rem;
 
-export const SCNavSide = styled.div`
-  display: flex;
-  align-items: center;
-  width: 25%;
-`;
+  .nav-part {
+    display: flex;
+    align-items: center;
+  }
 
-export const SCNavCenter = styled.div`
-  display: flex;
-  align-items: center;
-  width: 50%;
+  .nav-part-left {
+    width: 30px;
+    justify-content: left;
+  }
+
+  .nav-part-center {
+    justify-content: center;
+  }
+
+  .nav-part-right {
+    justify-content: right;
+  }
 `;
 
 export const SCContent = styled.div`
@@ -48,4 +55,17 @@ export const SCContent = styled.div`
 export const SCBackIcon = styled(IconChevronLeft)`
     display: block;
     margin: auto 0;
+`
+
+export const SCTitle = styled.h1`
+    font-size: 1.125rem;
+    font-weight: 600;
+`
+
+export const SCNavLink = styled(Link)`
+    color: "#554AF0";
+
+    &:visited {
+        color: #554AF0;
+    }
 `

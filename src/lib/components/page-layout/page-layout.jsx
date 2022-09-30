@@ -4,8 +4,7 @@ import {
   SCContainer,
   SCContent,
   SCNav,
-  SCNavCenter,
-  SCNavSide,
+  SCTitle,
 } from './page-layout.style';
 
 export const PageLayout = ({ children, title, prevPath, nextLink }) => {
@@ -13,18 +12,16 @@ export const PageLayout = ({ children, title, prevPath, nextLink }) => {
     <SCContainer>
       <SCNav>
         {prevPath && (
-          <SCNavSide style={{ justifyContent: 'left' }}>
+          <div className='nav-part nav-part-left'>
             <Link to={prevPath}>
-              <SCBackIcon size={36} stroke={2} color='#554AF0' />
+              <SCBackIcon size={30} color='#554AF0' />
             </Link>
-          </SCNavSide>
+          </div>
         )}
-        <SCNavCenter style={{ justifyContent: 'center' }}>
-          <h1>{title}</h1>
-        </SCNavCenter>
-        {nextLink && (
-          <SCNavSide style={{ justifyContent: 'right' }}>{nextLink}</SCNavSide>
-        )}
+        <div className='nav-part nav-part-center'>
+          <SCTitle>{title}</SCTitle>
+        </div>
+        <div className='nav-part nav-part-right'>{nextLink}</div>
       </SCNav>
       <SCContent>{children}</SCContent>
     </SCContainer>
