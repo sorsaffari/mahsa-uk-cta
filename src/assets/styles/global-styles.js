@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: Poppins;
+        font-family: "Poppins";
     }
 `;
 

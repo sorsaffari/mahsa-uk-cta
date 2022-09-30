@@ -18,7 +18,7 @@ export const PageLayout = ({ children, title, prev, next }) => {
           </SCNavSide>
         )}
         <SCNavCenter style={{ justifyContent: 'center' }}>
-          <Title order={1}>{title}</Title>
+          <h1>{title}</h1>
         </SCNavCenter>
         {next && (
           <SCNavSide style={{ justifyContent: 'right' }}>
