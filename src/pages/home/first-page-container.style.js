@@ -11,27 +11,41 @@ const FirstPageContainer = styled.main`
   height: 100vh;
   background: #000;
   font-family: 'Poppins', sans-serif;
+
   #home-page-intro {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     align-content: center;
-    width: 20rem;
+    width: 350px;
     padding-bottom: 10vh;
-    margin: auto;
   }
-  h1 {
+
+  h1.headline {
     color: #fff;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.7rem;
+    margin: 1.25rem 0 3.5rem 0;
+    font-size: 2rem;
+    line-height: 2.75rem;
   }
-  .mahsa {
-    width: 12rem;
-    margin: 2rem auto 0;
+
+  .action-btn {
+    height: 56px;
+
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #554AF0;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  img.mahsa {
+    width: 214px; 
+    height: 365px;
   }
 `;
 

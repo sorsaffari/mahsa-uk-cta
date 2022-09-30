@@ -1,8 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Home } from '../pages/home';
 import { PageWtt } from '../pages/wtt/page-wtt';
 import { YourMessage } from '../pages/your-message/your-message';
-import { PagePostCode } from "../pages";
+import { PagePostCode, PageHome } from "../pages";
 import { AlmostDone } from "../pages/almost-done/almost-done";
 
 export const Router = () => {
@@ -10,7 +9,7 @@ export const Router = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <Home />
+          <PageHome />
         </Route>
         <Route exact path="/postcode">
           <PagePostCode />
