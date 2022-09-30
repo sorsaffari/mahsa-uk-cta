@@ -1,6 +1,6 @@
-import { Title } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import {
+  SCBackIcon,
   SCContainer,
   SCContent,
   SCNav,
@@ -8,22 +8,22 @@ import {
   SCNavSide,
 } from './page-layout.style';
 
-export const PageLayout = ({ children, title, prev, next }) => {
+export const PageLayout = ({ children, title, prevPath, nextLink }) => {
   return (
     <SCContainer>
       <SCNav>
-        {prev && (
+        {prevPath && (
           <SCNavSide style={{ justifyContent: 'left' }}>
-            <Link to={prev.path}>{prev.text}</Link>
+            <Link to={prevPath}>
+              <SCBackIcon size={36} stroke={2} color='#554AF0' />
+            </Link>
           </SCNavSide>
         )}
         <SCNavCenter style={{ justifyContent: 'center' }}>
           <h1>{title}</h1>
         </SCNavCenter>
-        {next && (
-          <SCNavSide style={{ justifyContent: 'right' }}>
-            <Link to={next.path}>{next.text}</Link>
-          </SCNavSide>
+        {nextLink && (
+          <SCNavSide style={{ justifyContent: 'right' }}>{nextLink}</SCNavSide>
         )}
       </SCNav>
       <SCContent>{children}</SCContent>

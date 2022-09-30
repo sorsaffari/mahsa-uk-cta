@@ -1,6 +1,6 @@
 import { TextInput } from '@mantine/core';
-// import { Button } from '@mui/material';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import { PageLayout } from '../../lib/components';
 import { readMp, validatePostCode } from '../../services/api';
 
@@ -32,12 +32,9 @@ export const PagePostCode = () => {
 
   return (
     <PageLayout
-      title='post code'
-      next={{
-        path: 'https://google.com',
-        text: 'back ......... ...... ...... ....',
-      }}
-      prev={{ path: 'https://yahoo.com', text: 'next' }}
+      title='Enter Your Post Code'
+      nextLink={<Link to="/">next</Link>}
+      prevPath='https://yahoo.com'
     >
       <div>
         sss

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { IconChevronLeft } from '@tabler/icons';
+
 
 export const SCContainer = styled.div`
   height: 100%;
@@ -8,6 +10,10 @@ export const SCContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const SCNav = styled.nav`
@@ -15,17 +21,19 @@ export const SCNav = styled.nav`
   height: 70px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: c;
   padding: 0 2rem;
 `;
 
 export const SCNavSide = styled.div`
   display: flex;
+  align-items: center;
   width: 25%;
 `;
 
 export const SCNavCenter = styled.div`
   display: flex;
+  align-items: center;
   width: 50%;
 `;
 
@@ -34,3 +42,8 @@ export const SCContent = styled.div`
   flex-grow: 1;
   border: 1px solid red;
 `;
+
+export const SCBackIcon = styled(IconChevronLeft)`
+    display: block;
+    margin: auto 0;
+`
