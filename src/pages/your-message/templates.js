@@ -30,7 +30,7 @@ export const Templates = () => {
 			</Alert>
 			<br/>
 			<Truncate title="salam" description="hey">
-				salam
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit iusto dolorem ab reiciendis libero. Repudiandae voluptatem quam recusandae ex expedita saepe necessitatibus perferendis, earum laboriosam neque, similique voluptates! Harum, voluptas.
 			</Truncate>
 			<Button variant="light" color="violet" radius="md" size="md" onClick={() => setIsOpen(false)} fullWidth>
 				Got it!
