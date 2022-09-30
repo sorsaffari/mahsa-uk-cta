@@ -6,16 +6,16 @@ import {
 import { PagePostCode } from "../pages";
 import { Home } from "../pages/home";
 import { YourMessage } from "../pages/your-message/your-message";
-
+import { AlmostDone } from "../pages/almost-done/almost-done";
 
 export const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path='/'>
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path='/postcode'>
+        <Route exact path="/postcode">
           <PagePostCode />
         </Route>
         <Route exact path="/message">
@@ -24,6 +24,7 @@ export const Router = () => {
         <Route exact path="/wtt">
         </Route>
         <Route exact path="/done">
+          <AlmostDone />
         </Route>
       </Switch>
     </BrowserRouter>
