@@ -1,8 +1,13 @@
 import { useState } from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 import { PageLayout } from '../../lib/components';
 import { readMp, validatePostCode } from '../../services/api';
-import { SCContainer, SCNextButton, SCPostCodeLookup, SCTextInput } from "./page-post-code.style";
+import {
+  SCContainer,
+  SCNextButton,
+  SCPostCodeLookup,
+  SCTextInput,
+} from './page-post-code.style';
 
 export const PagePostCode = () => {
   const history = useHistory();
@@ -32,24 +37,21 @@ export const PagePostCode = () => {
   };
 
   return (
-    <PageLayout
-      title='Enter Your Post Code'
-      prevPath='/'
-    >
+    <PageLayout title='Enter Your Post Code' prevPath='/'>
       <SCContainer>
         <SCPostCodeLookup>
           <SCTextInput
             error={postCodeValidationError}
             label='Enter your UK post code'
             onChange={handlePostCodeChange}
-            size="lg"
+            size='lg'
           />
           <SCNextButton
             onClick={handlePostCodeSubmit}
             loading={isValidatingPostCode}
             disabled={!postCode}
             fullWidth
-            size="lg"
+            size='lg'
           >
             Next
           </SCNextButton>
