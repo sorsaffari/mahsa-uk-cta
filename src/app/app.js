@@ -6,7 +6,7 @@ export const App = () => {
   return (
     <MantineProvider withNormalizeCSS>
       <GlobalStyle />
-      <Router />;
+      <Router />
     </MantineProvider>
   );
 };
