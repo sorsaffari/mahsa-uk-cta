@@ -19,7 +19,7 @@ export const Home = () => {
           component={Link}
           to='/postcode'
         >
-          Write to your PM
+          Write to your MP
         </Button>
       </section>
     </FirstPageContainer>
