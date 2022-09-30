@@ -30,20 +30,21 @@ export const PagePostCode = () => {
     };
 
     return (
-        <PageLayout><div>
-            <TextField
-                error={!!postCodeValidationError}
-                helperText={postCodeValidationError}
-                label="Enter your UK post code"
-                autoFocus
-                variant='outlined'
-                onChange={handlePostCodeChange}
-            />
-            <Button
-                onClick={handlePostCodeSubmit}
-                loading={isValidatingPostCode ? 1 : 0}
-            >
-                Go
-            </Button>
-        </div></PageLayout>)
+        <PageLayout>
+            <div>
+                <TextField
+                    error={!!postCodeValidationError}
+                    helperText={postCodeValidationError}
+                    label="Enter your UK post code"
+                    autoFocus
+                    variant='outlined'
+                    onChange={handlePostCodeChange}
+                />
+                <Button
+                    onClick={handlePostCodeSubmit}
+                    loading={isValidatingPostCode ? 1 : 0}
+                >
+                    Next
+                </Button>
+            </div></PageLayout>)
 }
