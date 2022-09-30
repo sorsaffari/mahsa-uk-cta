@@ -19,6 +19,9 @@ export const SCContainer = styled.div`
 export const SCNav = styled.nav`
   width: 100%;
   height: 70px;
+
+  box-shadow: inset 0px -0.5px 0px #E2E3E4;
+
   display: flex;
   justify-content: space-between;
   align-items: c;
@@ -40,7 +43,6 @@ export const SCNavCenter = styled.div`
 export const SCContent = styled.div`
   padding: 1rem;
   flex-grow: 1;
-  border: 1px solid red;
 `;
 
 export const SCBackIcon = styled(IconChevronLeft)`
