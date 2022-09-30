@@ -43,6 +43,7 @@ export const PagePostCode = () => {
             label='Enter your UK post code'
             onChange={handlePostCodeChange}
             size="lg"
+            radius="md"
           />
           <SCNextButton
             onClick={handlePostCodeSubmit}
@@ -50,6 +51,7 @@ export const PagePostCode = () => {
             disabled={!postCode}
             fullWidth
             size="lg"
+            radius="md"
           >
             Next
           </SCNextButton>
