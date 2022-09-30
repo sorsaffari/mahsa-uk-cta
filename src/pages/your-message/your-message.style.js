@@ -8,7 +8,7 @@ export const YourMessageContainer = styled.section`
 		border: none;
 		border-radius: none;
 		width: 100%;
-		height: 100%;
+		height: calc(100% - 2rem);
 		resize: none;
 		padding: 1rem;
 		font-family: 'Poppins', sans-serif;
