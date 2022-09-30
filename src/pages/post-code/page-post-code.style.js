@@ -11,13 +11,39 @@ export const SCContainer = styled.div`
 `;
 
 export const SCPostCodeLookup = styled.div`
-  width: 80%;
+  width: 90%;
 `;
 
 export const SCTextInput = styled(TextInput)`
   margin-bottom: 1rem;
+
+  label {
+    font-size: 0.85rem;
+    margin: 0 0 0.25rem 0.25rem;
+  }
+
+  input {
+    height: 56px;
+    border-radius: 12px;
+    
+    &:focus {
+      border-color: #554AF0;
+    }
+  }
+
+  .mantine-InputWrapper-error {
+    font-size: 0.85rem;
+    margin-left: 0.25rem;
+  }
 `;
 
 export const SCNextButton = styled(Button)`
+  height: 56px;
   background-color: #554af0;
+  border-radius: 12px;
+
+  &:disabled {
+      background-color: #F8F8FA;
+      color: #D2D2D7;
+  }
 `;
