@@ -9,10 +9,6 @@ export const css = {
     align-items: center;
   `,
 
-  postCodeFinder: _css`
-    display: flex;
-  `,
-
   step: _css`
     width: 100%;
     margin: 1rem 0;
