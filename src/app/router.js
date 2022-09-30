@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import { PagePostCode } from "../pages";
 import { Home } from "../pages/home";
+import { YourMessage } from "../pages/your-message/your-message";
 
 
 export const Router = () => {
@@ -18,6 +19,7 @@ export const Router = () => {
           <PagePostCode />
         </Route>
         <Route exact path="/message">
+            <YourMessage />
         </Route>
         <Route exact path="/wtt">
         </Route>
