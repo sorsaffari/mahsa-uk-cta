@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn run prettier --write
+prettier --write
 git add .
 git commit -m 'chore: fix prettier issues'
