@@ -1,7 +1,8 @@
-import { Button, TextField } from "@mui/material"
-import { useState } from "react";
-import { PageLayout } from "../../lib/components"
-import { readMp, validatePostCode } from "../../services/api";
+import { TextInput } from '@mantine/core';
+// import { Button } from '@mui/material';
+import { useState } from 'react';
+import { PageLayout } from '../../lib/components';
+import { readMp, validatePostCode } from '../../services/api';
 
 export const PagePostCode = () => {
     const [postCode, setPostcode] = useState('');
@@ -18,7 +19,7 @@ export const PagePostCode = () => {
             setIsValidatingPostCode(true);
             setPostCodeValidationError('');
 
-            await validatePostCode(postCode)
+            await validatePostCode(postCode);
 
             const mp = await readMp(postCode);
             setMp(mp);
@@ -32,19 +33,19 @@ export const PagePostCode = () => {
     return (
         <PageLayout>
             <div>
-                <TextField
-                    error={!!postCodeValidationError}
-                    helperText={postCodeValidationError}
-                    label="Enter your UK post code"
-                    autoFocus
-                    variant='outlined'
+                sss
+                <TextInput
+                    error={postCodeValidationError}
+                    label='Enter your UK post code'
                     onChange={handlePostCodeChange}
                 />
-                <Button
-                    onClick={handlePostCodeSubmit}
-                    loading={isValidatingPostCode ? 1 : 0}
-                >
-                    Next
-                </Button>
-            </div></PageLayout>)
-}
+                {/* <Button
+          onClick={handlePostCodeSubmit}
+          loading={isValidatingPostCode ? 1 : 0}
+        >
+          Next
+        </Button> */}
+            </div>
+        </PageLayout>
+    );
+};

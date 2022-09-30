@@ -1,27 +1,20 @@
-import {
-    BrowserRouter,
-    Switch,
-    Route,
-} from "react-router-dom";
-import { PagePostCode } from "../pages";
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { PagePostCode } from '../pages';
 
 export const Router = () => {
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route exact path="/">
-                    {/* <Home /> */}
-                </Route>
-                <Route exact path="/postcode">
-                    <PagePostCode />
-                </Route>
-                <Route exact path="/message">
-                </Route>
-                <Route exact path="/wtt">
-                </Route>
-                <Route exact path="/done">
-                </Route>
-            </Switch>
-        </BrowserRouter>
-    )
-}
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/'>
+          {/* <Home /> */}
+        </Route>
+        <Route exact path='/postcode'>
+          <PagePostCode />
+        </Route>
+        <Route exact path='/message'></Route>
+        <Route exact path='/wtt'></Route>
+        <Route exact path='/done'></Route>
+      </Switch>
+    </BrowserRouter>
+  );
+};

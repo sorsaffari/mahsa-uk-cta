@@ -1,1 +1,1 @@
-export { PagePostCode } from "./post-code/post-code"
+export { PagePostCode } from './post-code/post-code';
