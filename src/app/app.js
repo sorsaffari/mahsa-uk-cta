@@ -1,9 +1,11 @@
 import { Router } from './router';
 import { MantineProvider } from '@mantine/core';
+import GlobalStyle from './global-styles';
 
 export const App = () => {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider withNormalizeCSS>
+      <GlobalStyle />
       <Router />;
     </MantineProvider>
   );
