@@ -3,7 +3,7 @@ import { MantineProvider } from '@mantine/core';
 
 export const App = () => {
   return (
-    <MantineProvider>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
       <Router />;
     </MantineProvider>
   );
