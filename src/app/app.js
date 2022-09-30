@@ -1,5 +1,10 @@
-import { Router } from "./router"
+import { Router } from './router';
+import { MantineProvider } from '@mantine/core';
 
 export const App = () => {
-    return (<Router />)
-}
+  return (
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      <Router />;
+    </MantineProvider>
+  );
+};

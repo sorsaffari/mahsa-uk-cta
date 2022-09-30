@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { Button, TextField } from '@mui/material';
-import Slider from 'react-slick';
-import { css } from './app.css';
-import { readMp, validatePostCode } from "../services/api";
+/* eslint-disable */
+// import { useState } from 'react';
+// import { Button, TextField } from '@mui/material';
+// import Slider from 'react-slick';
+// import { css } from './app.css';
+// import { readMp, validatePostCode } from '../services/api';
 
 const messages = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
 
@@ -16,7 +17,7 @@ const sliderSettings = {
 
 const Step = ({ children, title }) => {
   return (
-    <div css={css.step}>
+    <div>
       <p>{title}</p>
       {children}
     </div>
@@ -50,7 +51,7 @@ export const App = () => {
   // };
 
   return (
-    <main css={css.main}>
+    <main>
       <h1>SHOW YOUR SUPPORT FOR MAHSA</h1>
       <h2>Write to your ...</h2>
 

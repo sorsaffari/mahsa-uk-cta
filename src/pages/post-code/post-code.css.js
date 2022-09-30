@@ -1,3 +1,1 @@
-export const css = {
-
-}
+export const css = {};
