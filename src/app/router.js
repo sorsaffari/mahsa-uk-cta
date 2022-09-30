@@ -4,13 +4,15 @@ import {
     Route,
 } from "react-router-dom";
 import { PagePostCode } from "../pages";
+import { Home } from "../pages/home";
+
 
 export const Router = () => {
     return (
         <BrowserRouter>
             <Switch>
                 <Route exact path="/">
-                    {/* <Home /> */}
+                    <Home />
                 </Route>
                 <Route exact path="/postcode">
                     <PagePostCode />
