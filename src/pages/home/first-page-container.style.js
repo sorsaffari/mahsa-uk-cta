@@ -10,7 +10,7 @@ const FirstPageContainer = styled.main`
 	width: 100%;
 	height: 100vh;
 	background: #000;	
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 	#home-page-intro{
 		display: flex;
 		flex-direction: column;
