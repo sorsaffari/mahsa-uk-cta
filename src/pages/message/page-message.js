@@ -1,5 +1,5 @@
 import { Button } from '@mantine/core';
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { PageLayout } from '../../lib/components/page-layout/page-layout';
 import { SCContainer } from './page-message.style';
@@ -12,19 +12,20 @@ export const PageMessage = () => {
   const [showTemplatesModal, setShowTemplateModal] = useState(false);
   const [showInstructionsModal, setShowInstructionsModal] = useState(true);
 
+  const messageRef = useRef();
   const { search } = useLocation();
 
   const searchParams = useMemo(() => new URLSearchParams(search), [search]);
 
-  const initialMessage = useMemo(() => {
+  const constructMessage = (message) => {
     return [
       `Dear ${searchParams.get('mp')},`,
-      'Write here ...',
+      message,
       'Yours sincerely,',
     ].join('\n\n');
-  }, [searchParams]);
+  };
 
-  const [message, setMessage] = useState(initialMessage);
+  const [message, setMessage] = useState(constructMessage('Write here ...'));
 
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
@@ -46,10 +47,16 @@ export const PageMessage = () => {
     setShowInstructionsModal(false);
   };
 
+  const handleTemplateSelect = (template) => {
+    const newMessage = constructMessage(template.message);
+    setMessage(newMessage);
+    messageRef.current.focus();
+  };
+
   return (
     <PageLayout title='Your Message' prevPath='/postcode'>
       <SCContainer>
-        <textarea value={message} onChange={handleMessageChange}></textarea>
+        <textarea ref={messageRef} value={message} onChange={handleMessageChange}></textarea>
 
         <div className='your-message__buttons'>
           <Button
@@ -67,7 +74,10 @@ export const PageMessage = () => {
           </Button>
 
           {showTemplatesModal && (
-            <TemplatesModal onClose={handleTemplatesHide} />
+            <TemplatesModal
+              onClose={handleTemplatesHide}
+              onSelect={handleTemplateSelect}
+            />
           )}
 
           <Button

@@ -1,25 +1,47 @@
 import { Button, Divider } from '@mantine/core';
 import { Truncate } from '../../../../lib/components/truncate/truncate';
-import { SCModal } from "./templates-modal.style";
-import { ReactComponent as IconInfoCircle } from "../../../../assets/icons/icons-info-circle.svg"
-import { Alert } from "../../../../lib/components/alert/ alert";
+import { SCModal } from './templates-modal.style';
+import { ReactComponent as IconInfoCircle } from '../../../../assets/icons/icons-info-circle.svg';
+import { Alert } from '../../../../lib/components/alert/ alert';
 
-export const TemplatesModal = ({ onClose }) => {
-  const templates = ["aaa", "bbb", "ccc"];
+export const TemplatesModal = ({ onClose, onSelect }) => {
+  const templates = [
+    {
+      id: 1,
+      message: 'aaa',
+    },
+    {
+      id: 2,
+      message: 'bbb',
+    },
+    {
+      id: 3,
+      message: 'ccc',
+    },
+  ];
+
+  const handleTemplateUse = (template) => {
+    onSelect(template);
+    onClose();
+  };
 
   return (
     <SCModal opened={true} onClose={onClose}>
-
-      <Alert className="alert" icon={<IconInfoCircle size={40} />}>
+      <Alert className='alert' icon={<IconInfoCircle size={40} />}>
         Use your own words; we block copied-and-pasted identical messages.
       </Alert>
 
-      <Divider color="#E2E3E4" />
+      <Divider color='#E2E3E4' />
 
-      <h1 className="title">TEMPLATES</h1>
+      <h1 className='title'>TEMPLATES</h1>
 
-      {templates.map(template => (
-        <Truncate key={template} className="template-card" title='salam' description='hey'>
+      {templates.map((template) => (
+        <Truncate
+          key={template.id}
+          className='template-card'
+          title='salam'
+          description='hey'
+        >
           <p
             style={{
               color: '#444',
@@ -28,16 +50,24 @@ export const TemplatesModal = ({ onClose }) => {
               lineHeight: 1.2,
             }}
           >
-            {template}
+            {template.message}
           </p>
-          <Button className="button" variant='light' color='violet' radius='md' size='md' fullWidth>
+          <Button
+            className='button'
+            variant='light'
+            color='violet'
+            radius='md'
+            size='md'
+            fullWidth
+            onClick={() => handleTemplateUse(template)}
+          >
             Use this template
           </Button>
         </Truncate>
       ))}
 
       <Button
-        className="button"
+        className='button'
         variant='light'
         color='violet'
         radius='md'

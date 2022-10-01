@@ -86,7 +86,7 @@ export const StyledTurncate = styled.div`
     position: relative;
     max-height: 18rem;
     overflow-y: auto;
-    
+
     .overlay {
       display: flex;
       flex-direction: row;

@@ -28,7 +28,11 @@ export const Truncate = (props) => {
       </div>
       <div className='truncate__body'>
         <div>{props.children}</div>
-        {!isOpen ? <div className="overlay" onClick={() => setIsOpen(true)}></div> : ''}
+        {!isOpen ? (
+          <div className='overlay' onClick={() => setIsOpen(true)}></div>
+        ) : (
+          ''
+        )}
       </div>
     </StyledTurncate>
   );
