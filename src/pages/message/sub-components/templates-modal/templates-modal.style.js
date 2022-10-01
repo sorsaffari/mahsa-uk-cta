@@ -26,12 +26,15 @@ export const SCModal = styled(Modal)`
     display: none;
   }
 
-  .template-card {
-    margin-top: 1.5rem;
+  .template-cards {
+    width: calc(100% + 40px);
+    max-height: 400px;
+    overflow: scroll;
+    margin-left: -20px;
+    padding: 0 20px;
   }
 
-  .button {
-    background-color: #f8f8fa;
-    color: #554af0;
+  .template-card {
+    margin-top: 1.5rem;
   }
 `;

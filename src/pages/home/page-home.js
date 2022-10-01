@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Button } from '@mantine/core';
+import { Button } from '../../lib/components/button/button.jsx';
 import FirstPageContainer from './first-page-container.style.js';
 import Mahsa from './mahsa.png';
 

@@ -1,13 +1,10 @@
-import { IconAlertCircle } from '@tabler/icons';
 import { useMemo, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { PageLayout } from '../../lib/components/page-layout/page-layout';
 import { SCNavLink } from '../../lib/components/page-layout/page-layout.style';
 import { SCAlert, SCWttIFrame } from './page-wtt.style';
-import {
-  WttInstructions,
-  WttInstructionsModal,
-} from './sub-components/wtt-instructions-modal/wtt-instructions-modal';
+import { WttInstructionsModal } from './sub-components/wtt-instructions-modal/wtt-instructions-modal';
+import { ReactComponent as IconInfoSquare } from '../../assets/icons/icon-info-sqiare-fill.svg';
 
 export const PageWtt = () => {
   const { search: searchParams } = useLocation();
@@ -34,10 +31,8 @@ export const PageWtt = () => {
       nextLink={<SCNavLink to='/done'>Done</SCNavLink>}
     >
       <SCAlert
-        icon={<IconAlertCircle size={40} />}
-        color='violet'
-        radius='md'
-        variant='outline'
+        className='alert'
+        icon={<IconInfoSquare width={40} height={40} />}
         onClick={handleInstructionsShow}
       >
         <p>Ready to send your letter to your MP?</p>

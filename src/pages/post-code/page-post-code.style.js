@@ -1,4 +1,4 @@
-import { Button, TextInput } from '@mantine/core';
+import { TextInput } from '@mantine/core';
 import styled from 'styled-components';
 
 export const SCContainer = styled.div`
@@ -37,13 +37,13 @@ export const SCTextInput = styled(TextInput)`
   }
 `;
 
-export const SCNextButton = styled(Button)`
-  height: 56px;
-  background-color: #554af0;
-  border-radius: 12px;
+// export const SCNextButton = styled(Button)`
+//   height: 56px;
+//   background-color: #554af0;
+//   border-radius: 12px;
 
-  &:disabled {
-    background-color: #f8f8fa;
-    color: #d2d2d7;
-  }
-`;
+//   &:disabled {
+//     background-color: #f8f8fa;
+//     color: #d2d2d7;
+//   }
+// `;

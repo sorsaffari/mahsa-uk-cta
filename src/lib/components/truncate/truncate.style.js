@@ -84,8 +84,6 @@ export const StyledTurncate = styled.div`
   .truncate__body {
     padding: 0.5rem;
     position: relative;
-    max-height: 18rem;
-    overflow-y: auto;
 
     .overlay {
       display: flex;

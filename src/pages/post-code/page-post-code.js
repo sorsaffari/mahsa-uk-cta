@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { PageLayout } from '../../lib/components';
+import { Button } from '../../lib/components/button/button';
 import { readMp, validatePostCode } from '../../services/api';
 import {
   SCContainer,
-  SCNextButton,
   SCPostCodeLookup,
   SCTextInput,
 } from './page-post-code.style';
@@ -48,7 +48,8 @@ export const PagePostCode = () => {
             size='lg'
             radius='md'
           />
-          <SCNextButton
+          <Button
+            variant='primary'
             onClick={handlePostCodeSubmit}
             loading={isValidatingPostCode}
             disabled={!postCode}
@@ -57,7 +58,7 @@ export const PagePostCode = () => {
             radius='md'
           >
             Next
-          </SCNextButton>
+          </Button>
         </SCPostCodeLookup>
       </SCContainer>
     </PageLayout>

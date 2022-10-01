@@ -1,8 +1,14 @@
-import { Button, Modal } from '@mantine/core';
+import { Modal } from '../../../lib/components/modal/modal';
 
 export const InstructionsModal = ({ onClose }) => {
   return (
-    <Modal opened={true} onClose={onClose} title='Instructions' centered>
+    <Modal
+      opened={true}
+      onClose={onClose}
+      title='Instructions'
+      centered
+      hasConfirm
+    >
       <p style={{ color: '#777' }}>
         Please be polite, concise and to the point; if you abuse your London
         Assembly Members you devalue the service for all users.
@@ -18,16 +24,6 @@ export const InstructionsModal = ({ onClose }) => {
         matters, it might be better to contact your MP or a local
         representative.
       </p>
-      <Button
-        variant='light'
-        color='violet'
-        radius='md'
-        size='md'
-        onClick={onClose}
-        fullWidth
-      >
-        Got it!
-      </Button>
     </Modal>
   );
 };

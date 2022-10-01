@@ -16,5 +16,9 @@ export const SCContainer = styled.div`
     line-height: 1.4rem;
     color: #776ef3;
     flex-grow: 1;
+
+    p {
+      margin: 0;
+    }
   }
 `;
