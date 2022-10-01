@@ -13,7 +13,7 @@ export const PageHome = () => {
           #MahsaAmini
         </h1>
         <Button
-          className="action-btn"
+          className='action-btn'
           variant='light'
           component={Link}
           to='/postcode'

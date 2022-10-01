@@ -6,7 +6,7 @@ export const Truncate = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <StyledTurncate isOpen={isOpen} className='truncate'>
+    <StyledTurncate isOpen={isOpen} className={props.className}>
       <div
         className='truncate__header'
         onClick={() => setIsOpen((prev) => !prev)}
@@ -28,7 +28,7 @@ export const Truncate = (props) => {
       </div>
       <div className='truncate__body'>
         <div>{props.children}</div>
-        {!isOpen ? <span onClick={() => setIsOpen(true)}>Read more</span> : ''}
+        {!isOpen ? <div className="overlay" onClick={() => setIsOpen(true)}></div> : ''}
       </div>
     </StyledTurncate>
   );

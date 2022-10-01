@@ -37,14 +37,14 @@ const FirstPageContainer = styled.main`
 
     border-radius: 12px;
     font-size: 1rem;
-    color: #554AF0;
+    color: #554af0;
 
     display: flex;
     justify-content: center;
   }
 
   img.mahsa {
-    width: 214px; 
+    width: 214px;
     height: 365px;
   }
 `;

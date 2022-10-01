@@ -43,18 +43,18 @@ export const PagePostCode = () => {
           <SCTextInput
             error={postCodeValidationError}
             label='Enter your UK post code'
-            placeholder="SW1H 9NB"
+            placeholder='SW1H 9NB'
             onChange={handlePostCodeChange}
-            size="lg"
-            radius="md"
+            size='lg'
+            radius='md'
           />
           <SCNextButton
             onClick={handlePostCodeSubmit}
             loading={isValidatingPostCode}
             disabled={!postCode}
             fullWidth
-            size="lg"
-            radius="md"
+            size='lg'
+            radius='md'
           >
             Next
           </SCNextButton>

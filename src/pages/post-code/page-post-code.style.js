@@ -25,9 +25,9 @@ export const SCTextInput = styled(TextInput)`
   input {
     height: 56px;
     border-radius: 12px;
-    
+
     &:focus {
-      border-color: #554AF0;
+      border-color: #554af0;
     }
   }
 
@@ -43,7 +43,7 @@ export const SCNextButton = styled(Button)`
   border-radius: 12px;
 
   &:disabled {
-      background-color: #F8F8FA;
-      color: #D2D2D7;
+    background-color: #f8f8fa;
+    color: #d2d2d7;
   }
 `;

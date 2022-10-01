@@ -1,8 +1,8 @@
-import { Alert } from "@mantine/core";
-import styled from "styled-components";
+import { Alert } from '@mantine/core';
+import styled from 'styled-components';
 
 export const SCAlert = styled(Alert)`
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
   p {
     margin: 0;
     color: #776ef3;
@@ -17,4 +17,4 @@ margin-bottom: 1rem;
 export const SCWttIFrame = styled.iframe`
   width: 100%;
   flex-grow: 1;
-`
+`;

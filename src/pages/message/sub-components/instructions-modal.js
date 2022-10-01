@@ -1,6 +1,6 @@
 import { Button, Modal } from '@mantine/core';
 
-export const WttInstructionsModal = ({ onClose }) => {
+export const InstructionsModal = ({ onClose }) => {
   return (
     <Modal opened={true} onClose={onClose} title='Instructions' centered>
       <p style={{ color: '#777' }}>
