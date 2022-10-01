@@ -1,19 +1,23 @@
 import { Button } from '@mantine/core';
 import { useMemo, useRef, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import copy from "copy-to-clipboard";
+import { useHistory, useLocation } from 'react-router-dom';
 import { PageLayout } from '../../lib/components/page-layout/page-layout';
 import { SCContainer } from './page-message.style';
 import { InstructionsModal } from './sub-components/instructions-modal';
 import { TemplatesModal } from './sub-components/templates-modal/templates-modal';
 import { ReactComponent as IconDocument } from '../../assets/icons/icon-document.svg';
 import { ReactComponent as IconInfo } from '../../assets/icons/icon-info-square.svg';
+import { SCNavLink } from "../../lib/components/page-layout/page-layout.style";
 
 export const PageMessage = () => {
   const [showTemplatesModal, setShowTemplateModal] = useState(false);
   const [showInstructionsModal, setShowInstructionsModal] = useState(true);
 
   const messageRef = useRef();
+
   const { search } = useLocation();
+  const history = useHistory();
 
   const searchParams = useMemo(() => new URLSearchParams(search), [search]);
 
@@ -53,8 +57,13 @@ export const PageMessage = () => {
     messageRef.current.focus();
   };
 
+  const handleNext = () => {
+    copy(message);
+    history.push(`/wtt${search}`);
+  }
+
   return (
-    <PageLayout title='Your Message' prevPath='/postcode'>
+    <PageLayout title='Your Message' prevPath='/postcode' nextLink={<SCNavLink onClick={handleNext}>Continue</SCNavLink>}>
       <SCContainer>
         <textarea ref={messageRef} value={message} onChange={handleMessageChange}></textarea>
 
