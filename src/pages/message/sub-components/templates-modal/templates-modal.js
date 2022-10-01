@@ -4,28 +4,9 @@ import { SCModal } from './templates-modal.style';
 import { ReactComponent as IconInfoCircle } from '../../../../assets/icons/icons-info-circle.svg';
 import { Alert } from '../../../../lib/components/alert/alert';
 import { Button } from '../../../../lib/components/button/button';
+import { templates } from "../../../../services/templates";
 
 export const TemplatesModal = ({ onClose, onSelect }) => {
-  const templates = [
-    {
-      id: 1,
-      message:
-        'aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa aaaaaa ',
-    },
-    {
-      id: 2,
-      message: 'bbb',
-    },
-    {
-      id: 3,
-      message: 'ccc',
-    },
-    {
-      id: 4,
-      message: 'ddd',
-    },
-  ];
-
   const handleTemplateUse = (template) => {
     onSelect(template);
     onClose();
@@ -33,8 +14,9 @@ export const TemplatesModal = ({ onClose, onSelect }) => {
 
   return (
     <SCModal opened={true} onClose={onClose}>
-      <Alert className='alert' icon={<IconInfoCircle size={40} />}>
-        Use your own words; we block copied-and-pasted identical messages.
+      <Alert className='alert' icon={<IconInfoCircle width={40} height={40} />}>
+        Please avoid identitical cipied-and-pasted changes.{" "}
+        <strong>If you choose to use a template, please make it your own by modifying it.</strong>
       </Alert>
 
       <Divider color='#E2E3E4' />
@@ -46,8 +28,7 @@ export const TemplatesModal = ({ onClose, onSelect }) => {
           <Truncate
             key={template.id}
             className='template-card'
-            title='salam'
-            description='hey'
+            title={template.title}
           >
             <p
               style={{
@@ -57,6 +38,7 @@ export const TemplatesModal = ({ onClose, onSelect }) => {
                 lineHeight: 1.2,
                 maxHeight: '300px',
                 overflow: 'auto',
+                whiteSpace: 'pre-line'
               }}
             >
               {template.message}

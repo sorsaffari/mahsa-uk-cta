@@ -1,9 +1,12 @@
+import { useDocumentTitle } from "@mantine/hooks";
 import { Link } from 'react-router-dom';
 import { Button } from '../../lib/components/button/button.jsx';
 import FirstPageContainer from './first-page-container.style.js';
 import Mahsa from './mahsa.png';
 
 export const PageHome = () => {
+  useDocumentTitle("Stand with Iran | Home")
+
   return (
     <FirstPageContainer>
       <section id='home-page-intro'>

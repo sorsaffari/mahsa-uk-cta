@@ -9,8 +9,11 @@ import { TemplatesModal } from './sub-components/templates-modal/templates-modal
 import { ReactComponent as IconDocument } from '../../assets/icons/icon-document.svg';
 import { ReactComponent as IconInfo } from '../../assets/icons/icon-info-square.svg';
 import { SCNavLink } from '../../lib/components/page-layout/page-layout.style';
+import { useDocumentTitle } from "@mantine/hooks";
 
 export const PageMessage = () => {
+  useDocumentTitle("Stand with Iran | Your message")
+
   const [showTemplatesModal, setShowTemplateModal] = useState(false);
   const [showInstructionsModal, setShowInstructionsModal] = useState(true);
 

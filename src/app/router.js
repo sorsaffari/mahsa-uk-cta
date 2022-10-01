@@ -1,7 +1,5 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { PageWtt } from '../pages/wtt/page-wtt';
-import { PagePostCode, PageHome, PageMessage } from '../pages';
-import { AlmostDone } from '../pages/almost-done/almost-done';
+import { PagePostCode, PageHome, PageMessage, PageWtt, PageDone } from '../pages';
 
 export const Router = () => {
   return (
@@ -20,7 +18,7 @@ export const Router = () => {
           <PageWtt />
         </Route>
         <Route exact path='/done'>
-          <AlmostDone />
+          <PageDone />
         </Route>
       </Switch>
     </BrowserRouter>

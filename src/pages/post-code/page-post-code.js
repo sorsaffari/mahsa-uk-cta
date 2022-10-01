@@ -1,3 +1,4 @@
+import { useDocumentTitle } from "@mantine/hooks";
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { PageLayout } from '../../lib/components';
@@ -10,6 +11,8 @@ import {
 } from './page-post-code.style';
 
 export const PagePostCode = () => {
+  useDocumentTitle("Stand with Iran | Enter post code")
+
   const history = useHistory();
 
   const [postCode, setPostcode] = useState('');

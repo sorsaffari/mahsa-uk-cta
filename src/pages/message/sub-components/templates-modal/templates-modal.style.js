@@ -28,7 +28,7 @@ export const SCModal = styled(Modal)`
 
   .template-cards {
     width: calc(100% + 40px);
-    max-height: 400px;
+    max-height: 360px;
     overflow: scroll;
     margin-left: -20px;
     padding: 0 20px;

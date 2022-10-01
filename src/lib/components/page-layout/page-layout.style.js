@@ -33,7 +33,6 @@ export const SCNav = styled.nav`
   }
 
   .nav-part-left {
-    width: 30px;
     justify-content: left;
   }
 
@@ -43,6 +42,10 @@ export const SCNav = styled.nav`
 
   .nav-part-right {
     justify-content: right;
+  }
+
+  .nav-part-right, .nav-part-left {
+    width: 65px;
   }
 `;
 

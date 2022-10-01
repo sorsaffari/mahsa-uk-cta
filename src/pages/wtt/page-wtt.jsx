@@ -5,8 +5,11 @@ import { SCNavLink } from '../../lib/components/page-layout/page-layout.style';
 import { SCAlert, SCWttIFrame } from './page-wtt.style';
 import { WttInstructionsModal } from './sub-components/wtt-instructions-modal/wtt-instructions-modal';
 import { ReactComponent as IconInfoSquare } from '../../assets/icons/icon-info-sqiare-fill.svg';
+import { useDocumentTitle } from '@mantine/hooks';
 
 export const PageWtt = () => {
+  useDocumentTitle('Stand with Iran | Write to them');
+
   const { search: searchParams } = useLocation();
   const [showInstructions, setShowInstructions] = useState(true);
 
